@@ -19,6 +19,8 @@
 		43A2DFDE192286A100EE60E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A2DFC6192286A100EE60E3 /* UIKit.framework */; };
 		43A2DFE6192286A100EE60E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43A2DFE4192286A100EE60E3 /* InfoPlist.strings */; };
 		43A2DFE8192286A100EE60E3 /* UIViewShadowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A2DFE7192286A100EE60E3 /* UIViewShadowTests.m */; };
+		43A2DFFB19228DF500EE60E3 /* BIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A2DFFA19228DF500EE60E3 /* BIMainViewController.m */; };
+		43A2E00019228E1E00EE60E3 /* BIMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A2DFFF19228E1E00EE60E3 /* BIMainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		43A2DFE3192286A100EE60E3 /* UIViewShadowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIViewShadowTests-Info.plist"; sourceTree = "<group>"; };
 		43A2DFE5192286A100EE60E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43A2DFE7192286A100EE60E3 /* UIViewShadowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewShadowTests.m; sourceTree = "<group>"; };
+		43A2DFF919228DF500EE60E3 /* BIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIMainViewController.h; path = Classes/GUI/ViewController/BIMainViewController.h; sourceTree = "<group>"; };
+		43A2DFFA19228DF500EE60E3 /* BIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIMainViewController.m; path = Classes/GUI/ViewController/BIMainViewController.m; sourceTree = "<group>"; };
+		43A2DFFE19228E1E00EE60E3 /* BIMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIMainView.h; path = Classes/GUI/Views/BIMainView.h; sourceTree = "<group>"; };
+		43A2DFFF19228E1E00EE60E3 /* BIMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIMainView.m; path = Classes/GUI/Views/BIMainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,8 @@
 		43A2DFF21922874000EE60E3 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				43A2DFFD19228E0800EE60E3 /* Views */,
+				43A2DFFC19228DF800EE60E3 /* ViewController */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -190,6 +198,24 @@
 				43A2DFD4192286A100EE60E3 /* Images.xcassets */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		43A2DFFC19228DF800EE60E3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43A2DFF919228DF500EE60E3 /* BIMainViewController.h */,
+				43A2DFFA19228DF500EE60E3 /* BIMainViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		43A2DFFD19228E0800EE60E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43A2DFFE19228E1E00EE60E3 /* BIMainView.h */,
+				43A2DFFF19228E1E00EE60E3 /* BIMainView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43A2DFCF192286A100EE60E3 /* main.m in Sources */,
+				43A2DFFB19228DF500EE60E3 /* BIMainViewController.m in Sources */,
+				43A2E00019228E1E00EE60E3 /* BIMainView.m in Sources */,
 				43A2DFD3192286A100EE60E3 /* BIAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
