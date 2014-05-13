@@ -8,6 +8,7 @@
 
 #import "BIMainViewController.h"
 #import "BIMainView.h"
+#import "UIView+BIShadow.h"
 
 typedef NS_ENUM(NSUInteger, BIShadowAlignmentType) {
     BIShadowAlignmentTop = 0,
@@ -41,6 +42,14 @@ typedef NS_ENUM(NSUInteger, BIShadowAlignmentType) {
     self.mainView.frame = self.view.bounds;
 }
 
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
 #pragma mark - UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -63,11 +72,13 @@ typedef NS_ENUM(NSUInteger, BIShadowAlignmentType) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    [self updateShadowAlignment];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryNone;
+    [self updateShadowAlignment];
 }
 
 #pragma mark - Property
@@ -87,6 +98,36 @@ typedef NS_ENUM(NSUInteger, BIShadowAlignmentType) {
 }
 
 #pragma mark - Helper methods
+
+- (void)updateShadowAlignment {
+    NSArray *selectedCellsIndexPaths = [self.mainView.tableView indexPathsForSelectedRows];
+    NSMutableDictionary *shadowDictionary = [NSMutableDictionary new];
+    UIViewShadowAlignment shadowAlignment = UIViewShadowNone;
+    NSNumber *shadowOffset = @(20);
+    for (NSIndexPath *indexPath in selectedCellsIndexPaths) {
+        switch (indexPath.row) {
+            case BIShadowAlignmentTop:
+                shadowDictionary[UIViewShadowOffset.top] = shadowOffset;
+                shadowAlignment |= UIViewShadowTop;
+                break;
+            case BIShadowAlignmentBottom:
+                shadowDictionary[UIViewShadowOffset.bottom] = shadowOffset;
+                shadowAlignment |= UIViewShadowBottom;
+                break;
+            case BIShadowAlignmentLeft:
+                shadowDictionary[UIViewShadowOffset.left] = shadowOffset;
+                shadowAlignment |= UIViewShadowLeft;
+                break;
+            case BIShadowAlignmentRight:
+                shadowDictionary[UIViewShadowOffset.right] = shadowOffset;
+                shadowAlignment |= UIViewShadowRight;
+                break;
+            default:
+                break;
+        }
+    }
+    [self.mainView.shadowView setShadow:shadowAlignment withOffsets:shadowDictionary];
+}
 
 + (NSString *)cellTextAtRow:(NSUInteger)row {
 

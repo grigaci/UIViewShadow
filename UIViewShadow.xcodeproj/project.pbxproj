@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437AB1EF19229E96001FFA8A /* UIView+BIShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 437AB1EE19229E96001FFA8A /* UIView+BIShadow.m */; };
 		43A2DFC3192286A100EE60E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A2DFC2192286A100EE60E3 /* Foundation.framework */; };
 		43A2DFC5192286A100EE60E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A2DFC4192286A100EE60E3 /* CoreGraphics.framework */; };
 		43A2DFC7192286A100EE60E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A2DFC6192286A100EE60E3 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		437AB1ED19229E96001FFA8A /* UIView+BIShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+BIShadow.h"; path = "Classes/Helpers/Categories/UIView+BIShadow.h"; sourceTree = "<group>"; };
+		437AB1EE19229E96001FFA8A /* UIView+BIShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+BIShadow.m"; path = "Classes/Helpers/Categories/UIView+BIShadow.m"; sourceTree = "<group>"; };
 		43A2DFBF192286A100EE60E3 /* UIViewShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A2DFC2192286A100EE60E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43A2DFC4192286A100EE60E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		437AB1EC19229E6E001FFA8A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				437AB1ED19229E96001FFA8A /* UIView+BIShadow.h */,
+				437AB1EE19229E96001FFA8A /* UIView+BIShadow.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		43A2DFB6192286A100EE60E3 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,7 @@
 		43A2DFF31922874600EE60E3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				437AB1EC19229E6E001FFA8A /* Categories */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -316,6 +329,7 @@
 			files = (
 				43A2DFCF192286A100EE60E3 /* main.m in Sources */,
 				43A2DFFB19228DF500EE60E3 /* BIMainViewController.m in Sources */,
+				437AB1EF19229E96001FFA8A /* UIView+BIShadow.m in Sources */,
 				43A2E00019228E1E00EE60E3 /* BIMainView.m in Sources */,
 				43A2DFD3192286A100EE60E3 /* BIAppDelegate.m in Sources */,
 			);
@@ -440,6 +454,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIViewShadow/SupportingFiles/UIViewShadow-Prefix.pch";
 				INFOPLIST_FILE = "UIViewShadow/SupportingFiles/UIViewShadow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,6 +468,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIViewShadow/SupportingFiles/UIViewShadow-Prefix.pch";
 				INFOPLIST_FILE = "UIViewShadow/SupportingFiles/UIViewShadow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

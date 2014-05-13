@@ -7,6 +7,7 @@
 //
 
 #import "BIMainView.h"
+#import "UIView+BIShadow.h"
 
 @implementation BIMainView
 
@@ -25,6 +26,7 @@
     [super layoutSubviews];
     self.tableView.frame = [self tableViewFrame];
     self.shadowView.frame = [self shadowViewFrame];
+    [self.shadowView updateShadowPath];
 }
 
 #pragma mark - Property
@@ -34,6 +36,8 @@
         CGRect frame = [self shadowViewFrame];
         _shadowView = [[UIView alloc] initWithFrame:frame];
         _shadowView.backgroundColor = [UIColor blueColor];
+        _shadowView.shadowColor = [UIColor lightGrayColor];
+        _shadowView.shadowOpacity = 0.8;
     }
     return _shadowView;
 }
