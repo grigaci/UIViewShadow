@@ -35,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		437AB1ED19229E96001FFA8A /* UIView+BIShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+BIShadow.h"; path = "Classes/Helpers/Categories/UIView+BIShadow.h"; sourceTree = "<group>"; };
-		437AB1EE19229E96001FFA8A /* UIView+BIShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+BIShadow.m"; path = "Classes/Helpers/Categories/UIView+BIShadow.m"; sourceTree = "<group>"; };
+		437AB1ED19229E96001FFA8A /* UIView+BIShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+BIShadow.h"; path = "Classes/Helpers/Categories/UIView/UIView+BIShadow.h"; sourceTree = "<group>"; };
+		437AB1EE19229E96001FFA8A /* UIView+BIShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+BIShadow.m"; path = "Classes/Helpers/Categories/UIView/UIView+BIShadow.m"; sourceTree = "<group>"; };
 		43A2DFBF192286A100EE60E3 /* UIViewShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A2DFC2192286A100EE60E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43A2DFC4192286A100EE60E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,11 +83,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		437AB1EC19229E6E001FFA8A /* Categories */ = {
+		4366BD0A192348410043BC2E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
 				437AB1ED19229E96001FFA8A /* UIView+BIShadow.h */,
 				437AB1EE19229E96001FFA8A /* UIView+BIShadow.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		437AB1EC19229E6E001FFA8A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4366BD0A192348410043BC2E /* UIView */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
