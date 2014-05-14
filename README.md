@@ -1,6 +1,8 @@
 #UIView+BIShadow
 UIView category for setting shadow.
 
+[![Build Status](https://travis-ci.org/grigaci/UIViewShadow.svg?branch=master)](https://travis-ci.org/grigaci/UIViewShadow)
+
 ##Installation
 Just drag&drop the ```UIView+BIShadow.h/m``` files in your Xcode Project.
 
